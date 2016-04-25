@@ -26,6 +26,12 @@ imap <C-C> <c-o>:pyf ~/.vim/clang-format.py<cr>
 "Nerdtree
 map <Space>n :NERDTreeToggle<CR>
 
+"resize windows
+noremap <C-Up> <C-W>+
+noremap <C-Down> <C-W>-
+noremap <C-Left> <C-W><
+noremap <C-Right> <C-W>>
+
 "airline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
