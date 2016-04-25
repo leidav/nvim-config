@@ -1,7 +1,5 @@
 call plug#begin()
 
-Plug 'fholgado/minibufexpl.vim'
-
 Plug 'vim-airline/vim-airline'
 
 Plug 'vim-airline/vim-airline-themes'
@@ -24,12 +22,6 @@ colorscheme  badwolf
 "clang-format
 map <C-C> :pyf ~/.vim/clang-format.py<cr>
 imap <C-C> <c-o>:pyf ~/.vim/clang-format.py<cr>
-
-"fast window switching
-map <Space>h <C-W>h
-map <Space>j <C-W>j
-map <Space>k <C-W>k
-map <Space>l <C-W>l
 
 "Nerdtree
 map <Space>n :NERDTreeToggle<CR>
