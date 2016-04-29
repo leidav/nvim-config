@@ -20,6 +20,8 @@ Plug 'qpkorr/vim-bufkill'
 "git
 Plug 'tpope/vim-fugitive'
 
+Plug 'octol/vim-cpp-enhanced-highlight'
+
 call plug#end()
 
 "show line numbers
@@ -54,7 +56,7 @@ nnoremap <A-j> <C-w>j
 nnoremap <A-k> <C-w>k
 nnoremap <A-l> <C-w>l
 
-"fast terminal exit
+"fast terminal exitle
 tnoremap <Esc> <C-\><C-n>
 tnoremap <A-h> <C-\><C-n><C-w>h
 tnoremap <A-j> <C-\><C-n><C-w>j
@@ -62,7 +64,7 @@ tnoremap <A-k> <C-\><C-n><C-w>k
 tnoremap <A-l> <C-\><C-n><C-w>l
 
 "clang-format
-map <C-K> :pyf ~/.vim/clang-format.py<cr>
+map <C-K> :pyf ~/.config/nvim/clang-format.py<cr>
 imap <C-K> <c-o>:pyf ~/.vim/clang-format.py<cr>
 
 "NerdCree
@@ -75,3 +77,4 @@ let g:airline_powerline_fonts = 1
 "deoplete
 let g:deoplete#enable_at_startup = 1
 "inoremap<silent><expr><C-Space> deoplete#mappings#manual_complete()
+
