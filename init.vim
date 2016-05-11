@@ -8,6 +8,8 @@ Plug 'vim-airline/vim-airline-themes'
 "auto completion
 Plug 'Shougo/deoplete.nvim'
 
+Plug 'zchee/deoplete-clang'
+
 "file viwer
 Plug 'scrooloose/nerdtree'
 
@@ -20,7 +22,13 @@ Plug 'qpkorr/vim-bufkill'
 "git
 Plug 'tpope/vim-fugitive'
 
+"improved highlighting
 Plug 'octol/vim-cpp-enhanced-highlight'
+
+"improved session management
+Plug 'xolox/vim-misc'
+
+Plug 'xolox/vim-session'
 
 call plug#end()
 
@@ -71,10 +79,21 @@ imap <C-K> <c-o>:pyf ~/.vim/clang-format.py<cr>
 map <silent><C-n> :NERDTreeToggle<CR>
 
 "airline
-let g:airline#extensions#tabline#enabled = 1
+"let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 
 "deoplete
 let g:deoplete#enable_at_startup = 1
 "inoremap<silent><expr><C-Space> deoplete#mappings#manual_complete()
 
+"deoplete-clang
+let g:deoplete#sources#clang#libclang_path = '/usr/lib/libclang.so'
+let g:deoplete#sources#clang#clang_header = '/usr/lib/clang'
+
+"CtrlP
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlPMixed'
+
+"vim-session
+let g:session_autosave = 'no'
+let g:session_autoload = 'no' 
