@@ -35,6 +35,9 @@ call plug#end()
 "show line numbers
 set number
 
+"show relative numbers
+set relativenumber
+
 "tab settings
 set tabstop=4
 set softtabstop=0
@@ -84,7 +87,7 @@ let g:airline_powerline_fonts = 1
 
 "deoplete
 let g:deoplete#enable_at_startup = 1
-"inoremap<silent><expr><C-Space> deoplete#mappings#manual_complete()
+inoremap<silent><expr><C-Space> deoplete#mappings#manual_complete()
 
 "deoplete-clang
 let g:deoplete#sources#clang#libclang_path = '/usr/lib/libclang.so'
