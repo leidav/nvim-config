@@ -30,6 +30,9 @@ Plug 'xolox/vim-misc'
 
 Plug 'xolox/vim-session'
 
+"Theme
+Plug 'freeo/vim-kalisi'
+
 call plug#end()
 
 "show line numbers
@@ -49,7 +52,8 @@ set cinoptions=(0,u0,U0
 "activate true color mode
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
-colorscheme  badwolf
+colorscheme kalisi
+"colorscheme  badwolf
 
 "switch z and y on german keyboard
 noremap <C-z> <C-y>
