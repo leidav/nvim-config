@@ -55,6 +55,9 @@ let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 colorscheme kalisi
 "colorscheme  badwolf
 
+" enable mouse in all modes exept insert mode
+set mouse=nvchr
+
 "switch z and y on german keyboard
 noremap <C-z> <C-y>
 
