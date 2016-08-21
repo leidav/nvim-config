@@ -33,6 +33,11 @@ Plug 'xolox/vim-session'
 "Theme
 Plug 'freeo/vim-kalisi'
 
+Plug 'tomasr/molokai'
+
+"Gutentags
+Plug 'ludovicchabant/vim-gutentags'
+
 call plug#end()
 
 "show line numbers
@@ -53,7 +58,8 @@ set cinoptions=(0,u0,U0
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
 colorscheme kalisi
-"colorscheme  badwolf
+"set background=dark
+"colorscheme molokai
 
 " enable mouse in all modes exept insert mode
 set mouse=nvchr
@@ -106,4 +112,4 @@ let g:ctrlp_cmd = 'CtrlPMixed'
 
 "vim-session
 let g:session_autosave = 'no'
-let g:session_autoload = 'no' 
+let g:session_autoload = 'no'
