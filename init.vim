@@ -66,6 +66,9 @@ colorscheme kalisi
 " enable mouse in all modes exept insert mode
 set mouse=nvchr
 
+"disable left mouse click in normal mode
+nmap <LeftMouse> <nop>
+
 "switch z and y on german keyboard
 noremap <C-z> <C-y>
 
