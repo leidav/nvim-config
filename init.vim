@@ -118,3 +118,5 @@ let g:ctrlp_cmd = 'CtrlPMixed'
 "vim-session
 let g:session_autosave = 'no'
 let g:session_autoload = 'no'
+let g:session_persist_font = 0
+let g:session_persist_colors = 0
