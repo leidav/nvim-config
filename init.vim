@@ -57,7 +57,7 @@ set cindent
 set cinoptions=(0,u0,U0
 
 "activate true color mode
-let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+set termguicolors
 
 colorscheme kalisi
 "set background=dark
