@@ -10,6 +10,8 @@ Plug 'Shougo/deoplete.nvim'
 
 Plug 'zchee/deoplete-clang'
 
+Plug 'zchee/deoplete-jedi'
+
 "file viwer
 Plug 'scrooloose/nerdtree'
 
