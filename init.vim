@@ -59,9 +59,9 @@ set cinoptions=(0,u0,U0
 "activate true color mode
 set termguicolors
 
-colorscheme kalisi
-"set background=dark
-"colorscheme molokai
+"colorscheme kalisi
+set background=dark
+colorscheme molokai
 
 " enable mouse in all modes exept insert mode
 set mouse=nvchr
