@@ -40,6 +40,9 @@ Plug 'tomasr/molokai'
 "Gutentags
 Plug 'ludovicchabant/vim-gutentags'
 
+"Clang format
+Plug 'rhysd/vim-clang-format'
+
 call plug#end()
 
 "show line numbers
@@ -93,9 +96,14 @@ tnoremap <A-k> <C-\><C-n><C-w>k
 tnoremap <A-l> <C-\><C-n><C-w>l
 
 "clang-format
-map <C-K> :pyf ~/.config/nvim/clang-format.py<cr>
-imap <C-K> <c-o>:pyf ~/.vim/clang-format.py<cr>
-
+map <C-K> :ClangFormat<cr>
+let g:clang_format#style_options = {
+			                        \"BasedOnStyle": "Google",
+									\"AccessModifierOffset": -4,
+									\"BreakBeforeBraces": "Linux",
+									\"IndentWidth": 4,
+									\"TabWidth": 4,
+									\"UseTab": "ForIndentation" }
 "NerdCree
 map <silent><C-n> :NERDTreeToggle<CR>
 
