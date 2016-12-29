@@ -96,7 +96,9 @@ tnoremap <A-k> <C-\><C-n><C-w>k
 tnoremap <A-l> <C-\><C-n><C-w>l
 
 "clang-format
-map <C-K> :ClangFormat<cr>
+autocmd FileType c,cpp,objc map <C-K> :ClangFormat<cr>
+autocmd FileType c,cpp,objc ClangFormatAutoEnable
+let g:clang_format#detect_style_file=1
 let g:clang_format#style_options = {
 			                        \"BasedOnStyle": "Google",
 									\"AccessModifierOffset": -4,
