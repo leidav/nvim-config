@@ -43,6 +43,8 @@ Plug 'ludovicchabant/vim-gutentags'
 "Clang format
 Plug 'rhysd/vim-clang-format'
 
+Plug 'scrooloose/nerdcommenter'
+
 call plug#end()
 
 "show line numbers
@@ -95,6 +97,7 @@ tnoremap <A-j> <C-\><C-n><C-w>j
 tnoremap <A-k> <C-\><C-n><C-w>k
 tnoremap <A-l> <C-\><C-n><C-w>l
 
+let mapleader=','
 "clang-format
 autocmd FileType c,cpp,objc map <C-K> :ClangFormat<cr>
 autocmd FileType c,cpp,objc ClangFormatAutoEnable
