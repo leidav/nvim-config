@@ -45,6 +45,9 @@ Plug 'rhysd/vim-clang-format'
 
 Plug 'scrooloose/nerdcommenter'
 
+"Cmake integration
+Plug 'vhdirk/vim-cmake'
+
 call plug#end()
 
 "show line numbers
