@@ -101,9 +101,14 @@ tnoremap <A-k> <C-\><C-n><C-w>k
 tnoremap <A-l> <C-\><C-n><C-w>l
 
 let mapleader=','
+
 "clang-format
-autocmd FileType c,cpp,objc noremap <C-K> :ClangFormat<cr>
-autocmd FileType c,cpp,objc ClangFormatAutoEnable
+augroup clangformat
+	autocmd!
+	autocmd FileType c,cpp,objc noremap <C-K> :ClangFormat<cr>
+	autocmd FileType c,cpp,objc ClangFormatAutoEnable
+augroup END
+
 let g:clang_format#detect_style_file=1
 let g:clang_format#style_options = {
 			                        \"BasedOnStyle": "Google",
