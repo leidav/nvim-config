@@ -67,6 +67,9 @@ set cinoptions=(0,u0,U0
 "activate true color mode
 set termguicolors
 
+"highlight column 80
+set colorcolumn=80
+
 "colorscheme kalisi
 set background=dark
 colorscheme molokai
@@ -116,6 +119,8 @@ let g:clang_format#style_options = {
 									\"BreakBeforeBraces": "Linux",
 									\"IndentWidth": 4,
 									\"TabWidth": 4,
+									\"AllowShortBlocksOnASingleLine": "false",
+									\"AllowShortFunctionsOnASingleLine": "Inline",
 									\"UseTab": "ForIndentation" }
 "NerdCree
 map <silent><C-n> :NERDTreeToggle<CR>
