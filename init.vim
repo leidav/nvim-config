@@ -16,7 +16,7 @@ Plug 'zchee/deoplete-jedi'
 Plug 'scrooloose/nerdtree'
 
 "fuzzy finder
-Plug 'ctrlpvim/ctrlp.vim'
+Plug 'cloudhead/neovim-fuzzy'
 
 "delete buffer without closing the window
 Plug 'qpkorr/vim-bufkill'
@@ -43,6 +43,7 @@ Plug 'ludovicchabant/vim-gutentags'
 "Clang format
 Plug 'rhysd/vim-clang-format'
 
+"Commenting
 Plug 'scrooloose/nerdcommenter'
 
 "Cmake integration
@@ -80,15 +81,22 @@ set mouse=nvchr
 "disable left mouse click in normal mode
 nmap <LeftMouse> <nop>
 
+let mapleader=','
+
 "switch z and y on german keyboard
 noremap <C-z> <C-y>
 
 "window functions
+
+"create window and open file
+noremap <Leader>s <C-W>s<C-W>j:FuzzyOpen<CR>
+noremap <Leader>v <C-W>v<C-W>l:FuzzyOpen<CR>
+
 "resize window
-nnoremap <C-Up> <C-W>+
-nnoremap <C-Down> <C-W>-
-nnoremap <C-Left> <C-W><
-nnoremap <C-Right> <C-W>>
+nnoremap + <C-W>+
+nnoremap - <C-W>-
+nnoremap * <C-W><
+nnoremap _ <C-W>>
 
 "fast window switching
 nnoremap <A-h> <C-w>h
@@ -96,14 +104,13 @@ nnoremap <A-j> <C-w>j
 nnoremap <A-k> <C-w>k
 nnoremap <A-l> <C-w>l
 
-"fast terminal exitle
-tnoremap <Esc> <C-\><C-n>
+"open terminal
+noremap <Leader>t <C-W>v<C-W>l:terminal<CR>
+"fast terminal exit
 tnoremap <A-h> <C-\><C-n><C-w>h
 tnoremap <A-j> <C-\><C-n><C-w>j
 tnoremap <A-k> <C-\><C-n><C-w>k
 tnoremap <A-l> <C-\><C-n><C-w>l
-
-let mapleader=','
 
 "clang-format
 augroup clangformat
@@ -137,9 +144,8 @@ inoremap<silent><expr><C-Space> deoplete#mappings#manual_complete()
 let g:deoplete#sources#clang#libclang_path = '/usr/lib/libclang.so'
 let g:deoplete#sources#clang#clang_header = '/usr/lib/clang'
 
-"CtrlP
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlPMixed'
+"neovim-fuzzy
+noremap <C-p> :FuzzyOpen<CR>
 
 "vim-session
 let g:session_autosave = 'no'
