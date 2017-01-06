@@ -12,6 +12,9 @@ Plug 'zchee/deoplete-clang'
 
 Plug 'zchee/deoplete-jedi'
 
+"echodoc
+Plug 'Shougo/echodoc.vim'
+
 "file viwer
 Plug 'scrooloose/nerdtree'
 
@@ -138,7 +141,13 @@ let g:airline_powerline_fonts = 1
 
 "deoplete
 let g:deoplete#enable_at_startup = 1
+inoremap <expr><C-l> deoplete#refresh()
 inoremap<silent><expr><C-Space> deoplete#mappings#manual_complete()
+
+"echodoc
+set noshowmode "disable mode indactor in command line
+set completeopt-=preview "disable preview window
+let g:echodoc_enable_at_startup = 1
 
 "deoplete-clang
 let g:deoplete#sources#clang#libclang_path = '/usr/lib/libclang.so'
