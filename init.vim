@@ -12,6 +12,9 @@ Plug 'zchee/deoplete-clang'
 
 Plug 'zchee/deoplete-jedi'
 
+"include completion
+Plug 'Shougo/neoinclude.vim'
+
 "echodoc
 Plug 'Shougo/echodoc.vim'
 
@@ -98,8 +101,8 @@ noremap <Leader>v <C-W>v<C-W>l:FuzzyOpen<CR>
 "resize window
 nnoremap + <C-W>+
 nnoremap - <C-W>-
-nnoremap * <C-W><
-nnoremap _ <C-W>>
+nnoremap _ <C-W><
+nnoremap * <C-W>>
 
 "fast window switching
 nnoremap <A-h> <C-w>h
@@ -139,22 +142,25 @@ map <silent><C-n> :NERDTreeToggle<CR>
 "let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
 
-"deoplete
+"auto completion
+set completeopt=menuone
 let g:deoplete#enable_at_startup = 1
-inoremap <expr><C-l> deoplete#refresh()
+let g:deoplete#enable_refresh_always = 1
 inoremap<silent><expr><C-Space> deoplete#mappings#manual_complete()
+
+"deoplete-clang
+let g:deoplete#sources#clang#sort_algo = 'priority'
+let g:deoplete#sources#clang#libclang_path = '/usr/lib/libclang.so'
+let g:deoplete#sources#clang#clang_header = '/usr/lib/clang'
 
 "echodoc
 set noshowmode "disable mode indactor in command line
 set completeopt-=preview "disable preview window
 let g:echodoc_enable_at_startup = 1
 
-"deoplete-clang
-let g:deoplete#sources#clang#libclang_path = '/usr/lib/libclang.so'
-let g:deoplete#sources#clang#clang_header = '/usr/lib/clang'
 
 "neovim-fuzzy
-noremap <C-p> :FuzzyOpen<CR>
+noremap <silent><C-p> :FuzzyOpen<CR>
 
 "vim-session
 let g:session_autosave = 'no'
