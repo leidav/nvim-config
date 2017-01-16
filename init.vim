@@ -55,6 +55,9 @@ Plug 'scrooloose/nerdcommenter'
 "Cmake integration
 Plug 'vhdirk/vim-cmake'
 
+"Neoterm
+Plug 'kassio/neoterm'
+
 call plug#end()
 
 "show line numbers
@@ -95,8 +98,8 @@ noremap <C-z> <C-y>
 "window functions
 
 "create window and open file
-noremap <Leader>s <C-W>s<C-W>j:FuzzyOpen<CR>
-noremap <Leader>v <C-W>v<C-W>l:FuzzyOpen<CR>
+noremap <silent><Leader>s <C-W>s<C-W>j:FuzzyOpen<CR>
+noremap <silent><Leader>v <C-W>v<C-W>l:FuzzyOpen<CR>
 
 "resize window
 nnoremap + <C-W>+
@@ -111,7 +114,9 @@ nnoremap <A-k> <C-w>k
 nnoremap <A-l> <C-w>l
 
 "open terminal
-noremap <Leader>t <C-W>v<C-W>l:terminal<CR>
+"noremap <Leader>t <C-W>v<C-W>l:terminal<CR>
+let g:neoterm_position='vertical'
+noremap <silent><Leader>t :Ttoggle<CR>
 "fast terminal exit
 tnoremap <A-h> <C-\><C-n><C-w>h
 tnoremap <A-j> <C-\><C-n><C-w>j
