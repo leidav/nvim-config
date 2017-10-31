@@ -94,6 +94,9 @@ nmap <LeftMouse> <nop>
 
 let mapleader=','
 
+"better copy and paste
+set clipboard+=unnamedplus
+
 "switch z and y on german keyboard
 noremap <C-z> <C-y>
 
