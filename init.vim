@@ -12,7 +12,7 @@ Plug 'zchee/deoplete-clang'
 
 Plug 'zchee/deoplete-jedi'
 
-Plug 'autozimu/LanguageClient-neovim'
+"Plug 'autozimu/LanguageClient-neovim'
 
 "include completion
 Plug 'Shougo/neoinclude.vim'
@@ -120,7 +120,8 @@ nnoremap <A-l> <C-w>l
 
 "open terminal
 "noremap <Leader>t <C-W>v<C-W>l:terminal<CR>
-let g:neoterm_position='vertical'
+"let g:neoterm_position='vertical'
+let g:neoterm_default_mod='vertical'
 noremap <silent><Leader>t :Ttoggle<CR>
 "fast terminal exit
 tnoremap <ESC> <C-\><C-n>
