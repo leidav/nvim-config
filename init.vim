@@ -8,7 +8,7 @@ Plug 'vim-airline/vim-airline-themes'
 "auto completion
 Plug 'Shougo/deoplete.nvim'
 
-"Plug 'zchee/deoplete-clang'
+Plug 'zchee/deoplete-clang'
 
 Plug 'zchee/deoplete-jedi'
 
@@ -178,9 +178,9 @@ let g:deoplete#enable_refresh_always = 1
 inoremap<silent><expr><C-Space> deoplete#mappings#manual_complete()
 
 "deoplete-clang
-"let g:deoplete#sources#clang#sort_algo = 'priority'
-"let g:deoplete#sources#clang#libclang_path = '/usr/lib/libclang.so'
-"let g:deoplete#sources#clang#clang_header = '/usr/lib/clang'
+let g:deoplete#sources#clang#sort_algo = 'priority'
+let g:deoplete#sources#clang#libclang_path = '/usr/lib/libclang.so'
+let g:deoplete#sources#clang#clang_header = '/usr/lib/clang'
 
 "echodoc
 set noshowmode "disable mode indactor in command line
@@ -198,8 +198,8 @@ let g:session_persist_font = 0
 let g:session_persist_colors = 0
 
 "language server
-let g:LanguageClient_serverCommands = {
-    \ 'c': ['clangd'],
-    \ 'cpp': ['clangd'],
-    \ }
-let g:LanguageClient_autoStart = 1
+"let g:LanguageClient_serverCommands = {
+"    \ 'c': ['clangd'],
+"    \ 'cpp': ['clangd'],
+"    \ }
+"let g:LanguageClient_autoStart = 1
