@@ -60,6 +60,8 @@ Plug 'vhdirk/vim-cmake'
 "Neoterm
 Plug 'kassio/neoterm'
 
+Plug 'neomake/neomake'
+
 call plug#end()
 
 "show line numbers
@@ -121,7 +123,7 @@ nnoremap <A-l> <C-w>l
 "open terminal
 "noremap <Leader>t <C-W>v<C-W>l:terminal<CR>
 "let g:neoterm_position='vertical'
-let g:neoterm_default_mod='vertical'
+let g:neoterm_default_mod='belowright'
 noremap <silent><Leader>t :Ttoggle<CR>
 "fast terminal exit
 tnoremap <ESC> <C-\><C-n>
@@ -204,3 +206,7 @@ let g:session_persist_colors = 0
 "    \ 'cpp': ['clangd'],
 "    \ }
 "let g:LanguageClient_autoStart = 1
+
+"neomake
+call neomake#configure#automake('nrwi', 500)
+
