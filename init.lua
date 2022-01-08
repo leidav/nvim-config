@@ -39,26 +39,6 @@ if (not vim.g.vscode) then
     vim.o.sessionoptions =
         "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal"
 
-    -- local dap_install = require("dap-install")
-    -- dap_install.setup({})
-
-    -- local debuggers = require("dap-install.api.debuggers").get_installed_debuggers()
-
-    -- for _, debugger in ipairs(debuggers) do
-    --	dap_install.config(debugger)
-    -- end
-
-    -- require('cmake').setup({})
-    -- require('telescope').load_extension('cmake')
-
-    -- require('cmake').setup({
-    -- dap_configuration = {
-    -- type = 'codelldb',
-    -- request = 'launch',
-    -- stopOnEntry = false,
-    -- runInTerminal = false,
-    -- }
-    -- })
     vim.opt.number = true
     vim.opt.relativenumber = true
     vim.opt.tabstop = 4
