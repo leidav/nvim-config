@@ -28,4 +28,5 @@ return require('packer').startup(function()
     -- use 'Shatur/neovim-cmake'
     use {'tami5/lspsaga.nvim'}
     use 'rmagatti/auto-session'
+    use 'onsails/lspkind-nvim'
 end)

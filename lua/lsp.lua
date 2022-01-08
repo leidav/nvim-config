@@ -1,6 +1,8 @@
 local lspconfig = require('lspconfig')
 local lsp_installer = require("nvim-lsp-installer")
 local lspsaga = require('lspsaga')
+local lspkind = require('lspkind')
+lspkind.init({})
 local cmp = require('cmp')
 require('utils')
 
@@ -19,7 +21,7 @@ local on_attach = function(client, bufnr)
     nnoremap('gr', '<cmd>Lspsaga rename<cr>')
     nnoremap('gx', '<cmd>Lspsaga code_action<cr>')
     xnoremap('gx', ':<c-u>Lspsaga range_code_action<cr>')
-    nnoremap('gl', [[<cmd>lua require'lspsaga.provider'.lsp_finder()<CR>]])
+    nnoremap('gu', [[<cmd>lua require'lspsaga.provider'.lsp_finder()<CR>]])
     nnoremap('gp',
              [[<cmd>lua require'lspsaga.provider'.preview_definition()<CR>]])
     nnoremap('K', [[<cmd>lua require('lspsaga.hover').render_hover_doc()<CR>]])
@@ -53,7 +55,10 @@ cmp.setup({
         {name = 'luasnip'} -- For luasnip users.
         -- { name = 'ultisnips' }, -- For ultisnips users.
         -- { name = 'snippy' }, -- For snippy users.
-    }, {{name = 'buffer'}})
+    }, {{name = 'buffer'}}),
+    formatting = {
+        format = lspkind.cmp_format({with_text = false, maxwidth = 50})
+    }
 })
 
 -- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).

@@ -59,7 +59,6 @@ if (not vim.g.vscode) then
     -- runInTerminal = false,
     -- }
     -- })
-
     vim.opt.number = true
     vim.opt.relativenumber = true
     vim.opt.tabstop = 4
@@ -124,10 +123,11 @@ if (not vim.g.vscode) then
     noremap('<C-n>', ':NvimTreeToggle<CR>')
     -- go to buffer
     nnoremap('gb', ':BufferLinePick<CR>')
+    nnoremap('gl', ':BufferLineCycleNext<CR>')
+    nnoremap('gh', ':BufferLineCyclePrev<CR>')
 
     -- close buffer
-    nnoremap('<C-c>', ':BufferLinePickClose<CR>')
-
-    nnoremap('gn', ':BufferLineCycleNext<CR>')
+    -- nnoremap('<C-c>', ':BufferLinePickClose<CR>')
+    nnoremap('<C-c>', ':bd<CR>')
 
 end
