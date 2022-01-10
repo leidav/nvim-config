@@ -36,11 +36,17 @@ if (not vim.g.vscode) then
             '~/', '~/projects', '~/Documents/projects'
         }
     })
+    require('nvim-web-devicons').setup({})
+
+    require('diffview').setup({enhanced_diff_hl = false, use_icons = true})
+    require("indent_blankline").setup({})
+
     vim.o.sessionoptions =
         "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal"
 
     vim.opt.number = true
     vim.opt.relativenumber = true
+    vim.opt.signcolumn = 'yes'
     vim.opt.tabstop = 4
     vim.opt.softtabstop = 0
     vim.opt.shiftwidth = 4

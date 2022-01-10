@@ -1,9 +1,7 @@
 return require('packer').startup(function()
     use 'wbthomason/packer.nvim'
-    use {
-        'nvim-lualine/lualine.nvim',
-        requires = {'kyazdani42/nvim-web-devicons', opt = true}
-    }
+    use 'nvim-lualine/lualine.nvim'
+    use 'kyazdani42/nvim-web-devicons'
     use 'williamboman/nvim-lspconfig'
     use 'williamboman/nvim-lsp-installer'
     use 'hrsh7th/cmp-nvim-lsp'
@@ -29,4 +27,6 @@ return require('packer').startup(function()
     use {'tami5/lspsaga.nvim'}
     use 'rmagatti/auto-session'
     use 'onsails/lspkind-nvim'
+    use {'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim'}
+    use 'lukas-reineke/indent-blankline.nvim'
 end)
