@@ -5,7 +5,11 @@ if (not vim.g.vscode) then
     require('lualine').setup({options = {theme = 'vscode'}})
 
     require('nvim-treesitter.configs').setup({
-        ensure_installed = "maintained",
+        ensure_installed = {
+            "c", "cpp", "python", "rust", "lua", "typescript", "make", "json",
+            "yaml", "javascript", "bash", "cmake", "html", "css", "dockerfile",
+            "glsl", "toml", "vim", "tsx"
+        },
         highlight = {enable = true, additional_vim_regex_highlighting = false}
     })
 
