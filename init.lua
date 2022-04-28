@@ -9,10 +9,10 @@ if (not vim.g.vscode) then
         highlight = {enable = true, additional_vim_regex_highlighting = false}
     })
 
+    vim.opt.termguicolors = true
     vim.g.vscode_style = "dark"
     vim.cmd('colorscheme vscode')
 
-    vim.opt.termguicolors = true
     require("bufferline").setup {}
 
     require('telescope').setup({
@@ -39,6 +39,7 @@ if (not vim.g.vscode) then
     require('nvim-web-devicons').setup({})
 
     require('diffview').setup({enhanced_diff_hl = false, use_icons = true})
+
     require("indent_blankline").setup({})
 
     vim.o.sessionoptions =
@@ -69,6 +70,7 @@ if (not vim.g.vscode) then
     vim.opt.cursorline = true
     vim.opt.termguicolors = true
     vim.opt.background = 'dark'
+    vim.opt.laststatus = 3
 
     -- switch z and y on german keyboard
     noremap('<C-z>', '<C-y>')

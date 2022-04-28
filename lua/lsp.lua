@@ -24,7 +24,7 @@ local on_attach = function(client, bufnr)
     nnoremap('gu', [[<cmd>lua require'lspsaga.provider'.lsp_finder()<CR>]])
     nnoremap('gp',
              [[<cmd>lua require'lspsaga.provider'.preview_definition()<CR>]])
-    nnoremap('K', [[<cmd>lua require('lspsaga.hover').render_hover_doc()<CR>]])
+    --nnoremap('gi', [[<cmd>lua require('lspsaga.hover').render_hover_doc()<CR>]])
 
     require("lsp_signature").on_attach()
 end
