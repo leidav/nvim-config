@@ -11,7 +11,7 @@ return require('packer').startup(function()
     use 'hrsh7th/nvim-cmp'
     use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
     use 'Mofiqul/vscode.nvim'
-    use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons'}
+    use {'akinsho/bufferline.nvim', tags = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
     use {'nvim-telescope/telescope.nvim', requires = {'nvim-lua/plenary.nvim'}}
     use 'nvim-telescope/telescope-fzy-native.nvim'
     use 'L3MON4D3/LuaSnip'
@@ -20,7 +20,7 @@ return require('packer').startup(function()
         'kyazdani42/nvim-tree.lua',
         requires = {'kyazdani42/nvim-web-devicons'}
     }
-    use 'akinsho/toggleterm.nvim'
+    use {'akinsho/toggleterm.nvim', tags= 'v1.*' }
     -- use 'mfussenegger/nvim-dap'
     -- use 'Pocco81/DAPInstall.nvim'
     -- use 'Shatur/neovim-cmake'
