@@ -1,4 +1,4 @@
-if (not vim.g.vscode) then
+if not vim.g.vscode then
     require('plugins')
     require('utils')
     require('lsp')
@@ -6,18 +6,18 @@ if (not vim.g.vscode) then
 
     require('nvim-treesitter.configs').setup({
         ensure_installed = {
-            "c", "cpp", "python", "rust", "lua", "typescript", "make", "json",
-            "yaml", "javascript", "bash", "cmake", "html", "css", "dockerfile",
-            "glsl", "toml", "vim", "tsx"
+            'c', 'cpp', 'python', 'rust', 'lua', 'typescript', 'make', 'json',
+            'yaml', 'javascript', 'bash', 'cmake', 'html', 'css', 'dockerfile',
+            'glsl', 'toml', 'vim', 'tsx'
         },
         highlight = {enable = true, additional_vim_regex_highlighting = false}
     })
 
     vim.opt.termguicolors = true
-    vim.g.vscode_style = "dark"
+    vim.g.vscode_style = 'dark'
     vim.cmd('colorscheme vscode')
 
-    require("bufferline").setup {}
+    require('bufferline').setup({})
 
     require('telescope').setup({
         extensions = {
@@ -31,7 +31,7 @@ if (not vim.g.vscode) then
 
     require('nvim-tree').setup({})
 
-    require("toggleterm").setup({})
+    require('toggleterm').setup({})
 
     require('auto-session').setup({
         log_level = 'info',
@@ -44,10 +44,10 @@ if (not vim.g.vscode) then
 
     require('diffview').setup({enhanced_diff_hl = false, use_icons = true})
 
-    require("indent_blankline").setup({})
+    require('indent_blankline').setup({})
 
     vim.o.sessionoptions =
-        "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal"
+        'blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal'
 
     vim.opt.number = true
     vim.opt.relativenumber = true
@@ -75,6 +75,27 @@ if (not vim.g.vscode) then
     vim.opt.termguicolors = true
     vim.opt.background = 'dark'
     vim.opt.laststatus = 3
+    if vim.g.neovide then
+        vim.opt.guifont = 'Source Code Pro:h11'
+        vim.g.neovide_cursor_animation_length = 0.05
+        vim.g.neovide_cursor_vfx_mode = 'ripple'
+        vim.g.terminal_color_0 = '#0000'
+        vim.g.terminal_color_1 = '#CC0000'
+        vim.g.terminal_color_2 = '#4E9A06'
+        vim.g.terminal_color_3 = '#C4A000'
+        vim.g.terminal_color_4 = '#3465A4'
+        vim.g.terminal_color_5 = '#75507B'
+        vim.g.terminal_color_6 = '#06989A'
+        vim.g.terminal_color_7 = '#D3D7CF'
+        vim.g.terminal_color_8 = '#555753'
+        vim.g.terminal_color_9 = '#EF2929'
+        vim.g.terminal_color_10 = '#8AE234'
+        vim.g.terminal_color_11 = ' #FCE94F'
+        vim.g.terminal_color_12 = '#729FCF'
+        vim.g.terminal_color_13 = '#AD7FA8'
+        vim.g.terminal_color_14 = '#34E2E2'
+        vim.g.terminal_color_15 = '#EEEEEC'
+    end
 
     -- switch z and y on german keyboard
     noremap('<C-z>', '<C-y>')
@@ -121,5 +142,4 @@ if (not vim.g.vscode) then
     -- close buffer
     -- nnoremap('<C-c>', ':BufferLinePickClose<CR>')
     nnoremap('<C-c>', ':bd<CR>')
-
 end
