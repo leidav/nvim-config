@@ -46,6 +46,8 @@ if not vim.g.vscode then
 
     require('indent_blankline').setup({})
 
+	require("dapui").setup()
+
     vim.o.sessionoptions =
         'blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal'
 
@@ -133,7 +135,7 @@ if not vim.g.vscode then
     nnoremap('<Leader>v',
              [[<C-W>v<C-W>l<Cmd>lua require('telescope.builtin').find_files()<CR>]])
 
-    noremap('<C-n>', ':NvimTreeToggle<CR>')
+	noremap('<C-n>', ':NvimTreeToggle<CR>')
     -- go to buffer
     nnoremap('gb', ':BufferLinePick<CR>')
     nnoremap('gl', ':BufferLineCycleNext<CR>')

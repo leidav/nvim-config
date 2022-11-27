@@ -21,7 +21,8 @@ return require('packer').startup(function()
         requires = {'kyazdani42/nvim-web-devicons'}
     }
     use {'akinsho/toggleterm.nvim', tags= 'v1.*' }
-    -- use 'mfussenegger/nvim-dap'
+    use 'mfussenegger/nvim-dap'
+	use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
     -- use 'Pocco81/DAPInstall.nvim'
     -- use 'Shatur/neovim-cmake'
     use {'tami5/lspsaga.nvim'}
