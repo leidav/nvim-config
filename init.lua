@@ -1,4 +1,5 @@
 if not vim.g.vscode then
+	require("neodev").setup({})
     require('plugins')
     require('utils')
     require('lsp')
@@ -45,6 +46,28 @@ if not vim.g.vscode then
     require('diffview').setup({enhanced_diff_hl = false, use_icons = true})
 
     require('indent_blankline').setup({})
+
+	local dap = require('dap')
+	dap.adapters.lldb = {
+	  type = 'executable',
+	  command = '/usr/bin/lldb-vscode', -- must be absolute path
+	  name = 'lldb'
+	}
+	dap.configurations.cpp = {
+		{
+			name = 'Default C/C++/Rust Launch Settings',
+			type = 'lldb',
+			request = 'launch',
+			program = function()
+			  return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
+			end,
+			cwd = '${workspaceFolder}',
+			stopOnEntry = false,
+			args = {},
+		}
+	}
+	dap.configurations.c = dap.configurations.cpp
+	dap.configurations.rust = dap.configurations.cpp
 
 	require("dapui").setup()
 
