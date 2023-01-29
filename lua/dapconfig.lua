@@ -44,6 +44,8 @@ noremap("<F5>", function() require('dap.ext.vscode').load_launchjs()
 	dap.continue()
 end)
 
+vim.api.nvim_create_user_command("DapUiToggle", function(args) dapui.toggle(args.args) end, {})
+
 noremap("<Leader>s", function() dap.step_over() end)
 noremap("<Leader>S", function() dap.step_into() end)
 noremap("<Leader>b", function() dap.toggle_breakpoint() end)
