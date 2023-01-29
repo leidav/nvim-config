@@ -82,6 +82,8 @@ if not vim.g.vscode then
 	}
 	dap.configurations.c = dap.configurations.cpp
 	dap.configurations.rust = dap.configurations.cpp
+	vim.fn.sign_define('DapBreakpoint',
+		{ text = '', texthl = '', linehl = '', numhl = '' })
 
 	local dapui = require("dapui")
 	dapui.setup()
@@ -194,11 +196,11 @@ if not vim.g.vscode then
 	nnoremap('<C-c>', ':bd<CR>')
 
 	-- debug
-	nnoremap("<F5>", function()
+	noremap("<F5>", function()
 		require('dap.ext.vscode').load_launchjs()
 		dap.continue()
 	end)
-	nnoremap("<Leader>s", function() dap.step_over() end)
-	nnoremap("<Leader>S", function() dap.step_into() end)
-	nnoremap("<Leader>b", function() dap.toggle_breakpoint() end)
+	noremap("<Leader>s", function() dap.step_over() end)
+	noremap("<Leader>S", function() dap.step_into() end)
+	noremap("<Leader>b", function() dap.toggle_breakpoint() end)
 end
