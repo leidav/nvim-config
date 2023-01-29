@@ -35,7 +35,7 @@ if not vim.g.vscode then
 	require('toggleterm').setup({})
 
 	require('auto-session').setup({
-		log_level = 'info',
+		log_level = 'error',
 		auto_session_enabled = true,
 		auto_session_suppress_dirs = {
 			'~/', '~/projects', '~/Documents/projects'
