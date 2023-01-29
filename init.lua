@@ -45,8 +45,14 @@ if not vim.g.vscode then
 
 	require('diffview').setup({ enhanced_diff_hl = false, use_icons = true })
 
-	require('indent_blankline').setup({})
 
+	require('indent_blankline').setup({
+		space_char_blankline = " ",
+		show_current_context = true,
+	})
+
+	vim.opt.list = true
+	vim.opt.listchars:append "space:⋅"
 
 
 	vim.o.sessionoptions =
