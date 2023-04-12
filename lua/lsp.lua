@@ -9,8 +9,11 @@ require('utils')
 local on_attach = function(client, bufnr)
 	-- format on save
 	local format_group = vim.api.nvim_create_augroup("format", { clear = true })
-	vim.api.nvim_create_autocmd("BufWritePre",
-		{ callback = vim.lsp.buf.formatting_sync, group = format_group })
+	vim.api.nvim_create_autocmd({ "BufWritePre" },
+		{ callback = function(ev)
+			vim.lsp.buf.format({ async = true })
+		end,
+			group = format_group })
 
 	nnoremap('gD', '<cmd>lua vim.lsp.buf.declaration()<CR>')
 	nnoremap('gd',
