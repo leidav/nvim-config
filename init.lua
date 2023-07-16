@@ -87,6 +87,7 @@ if not vim.g.vscode then
 	vim.opt.laststatus = 3
 	if vim.g.neovide then
 		vim.opt.guifont = 'Source Code Pro:h11'
+		--vim.opt.guifont = 'JetBrainsMono Nerd Font:h14'
 		vim.g.neovide_cursor_animation_length = 0.05
 		vim.g.neovide_cursor_vfx_mode = 'ripple'
 		vim.g.terminal_color_0 = '#0000'
