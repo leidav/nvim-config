@@ -34,13 +34,6 @@ if not vim.g.vscode then
 
 	require('toggleterm').setup({})
 
-	require('auto-session').setup({
-		log_level = 'error',
-		auto_session_enabled = true,
-		auto_session_suppress_dirs = {
-			'~/', '~/projects', '~/Documents/projects'
-		}
-	})
 	require('nvim-web-devicons').setup({})
 
 	require('diffview').setup({ enhanced_diff_hl = false, use_icons = true })

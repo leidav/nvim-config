@@ -26,7 +26,6 @@ return require('packer').startup(function()
 	-- use 'Pocco81/DAPInstall.nvim'
 	-- use 'Shatur/neovim-cmake'
 	use { 'tami5/lspsaga.nvim' }
-	use 'rmagatti/auto-session'
 	use 'onsails/lspkind-nvim'
 	use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
 	use 'lukas-reineke/indent-blankline.nvim'
