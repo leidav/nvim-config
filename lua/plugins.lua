@@ -28,6 +28,6 @@ return require('packer').startup(function()
 	use { 'tami5/lspsaga.nvim' }
 	use 'onsails/lspkind-nvim'
 	use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
-	use 'lukas-reineke/indent-blankline.nvim'
+	use { 'lukas-reineke/indent-blankline.nvim', tag = "v2.20.8" }
 	use 'folke/neodev.nvim'
 end)
