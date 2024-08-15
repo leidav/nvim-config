@@ -1,6 +1,6 @@
 local lspconfig = require('lspconfig')
 local lsp_installer = require("nvim-lsp-installer")
-local lspsaga = require('lspsaga')
+local lspsaga = require('lspsaga').setup({})
 local lspkind = require('lspkind')
 lspkind.init({})
 local cmp = require('cmp')
