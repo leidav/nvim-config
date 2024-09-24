@@ -1,6 +1,5 @@
 local lspconfig = require('lspconfig')
 local lsp_installer = require("nvim-lsp-installer")
-local lspsaga = require('lspsaga').setup({})
 local lspkind = require('lspkind')
 lspkind.init({})
 local cmp = require('cmp')
@@ -10,22 +9,21 @@ local on_attach = function(client, bufnr)
 	-- format on save
 	local format_group = vim.api.nvim_create_augroup("format", { clear = true })
 	vim.api.nvim_create_autocmd({ "BufWritePre" },
-		{ callback = function(ev)
-			vim.lsp.buf.format({ async = true })
-		end,
-			group = format_group })
+		{
+			callback = function(ev)
+				vim.lsp.buf.format({ async = true })
+			end,
+			group = format_group
+		})
 
-	nnoremap('gD', '<cmd>lua vim.lsp.buf.declaration()<CR>')
-	nnoremap('gd',
-		[[<Cmd>lua require('telescope.builtin').lsp_definitions()<CR>]])
-	nnoremap('gr', '<cmd>Lspsaga rename<cr>')
-	nnoremap('gx', '<cmd>Lspsaga code_action<cr>')
-	xnoremap('gx', ':<c-u>Lspsaga range_code_action<cr>')
-	nnoremap('gu', [[<cmd>lua require'lspsaga.provider'.lsp_finder()<CR>]])
-	nnoremap('gp',
-		[[<cmd>lua require'lspsaga.provider'.preview_definition()<CR>]])
-	--nnoremap('gi', [[<cmd>lua require('lspsaga.hover').render_hover_doc()<CR>]])
-
+	nnoremap('gD', '<cmd>lua vim.lsp.buf.declaration()<cr>')
+	nnoremap('gd', '<cmd>lua vim.lsp.buf.definition()<cr>')
+	nnoremap('gi', '<cmd>lua vim.lsp.buf.implementation()<cr>')
+	nnoremap('gt', '<cmd>lua vim.lsp.buf.type_definition()<cr>')
+	nnoremap('gr', '<cmd>lua vim.lsp.buf.rename()<cr>')
+	nnoremap('gx', '<cmd>lua vim.lsp.buf.code_action()<cr>')
+	--vnoremap('gx', '<cmd>lua vim.lsp.buf.range_code_action()<cr>')
+	nnoremap('gu', [[<Cmd>lua require('telescope.builtin').lsp_references()<CR>]])
 	require("lsp_signature").on_attach()
 end
 

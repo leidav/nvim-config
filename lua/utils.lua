@@ -17,3 +17,7 @@ end
 function xnoremap(lhs, rhs)
 	vim.keymap.set('x', lhs, rhs, { noremap = true, silent = true })
 end
+
+function vnoremap(lhs, rhs)
+	vim.keymap.set('v', lhs, rhs, { noremap = true, silent = true })
+end

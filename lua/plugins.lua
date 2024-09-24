@@ -25,7 +25,6 @@ return require('packer').startup(function()
 	use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" } }
 	-- use 'Pocco81/DAPInstall.nvim'
 	-- use 'Shatur/neovim-cmake'
-	use { 'nvimdev/lspsaga.nvim' }
 	use 'onsails/lspkind-nvim'
 	use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
 	use { 'lukas-reineke/indent-blankline.nvim', tag = "v2.20.8" }
