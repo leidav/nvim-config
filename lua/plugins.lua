@@ -20,7 +20,6 @@ return require('packer').startup(function()
 		'kyazdani42/nvim-tree.lua',
 		requires = { 'kyazdani42/nvim-web-devicons' }
 	}
-	use { 'akinsho/toggleterm.nvim', tags = 'v1.*' }
 	use 'mfussenegger/nvim-dap'
 	use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" } }
 	-- use 'Pocco81/DAPInstall.nvim'

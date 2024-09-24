@@ -1,6 +1,6 @@
 if not vim.g.vscode then
-	require("neodev").setup({})
 	require('plugins')
+	require("neodev").setup({})
 	require('utils')
 	require('lsp')
 	require('lualine').setup({ options = { theme = 'vscode' } })
@@ -31,8 +31,6 @@ if not vim.g.vscode then
 	require('telescope').load_extension('fzy_native')
 
 	require('nvim-tree').setup({})
-
-	require('toggleterm').setup({})
 
 	require('nvim-web-devicons').setup({})
 
